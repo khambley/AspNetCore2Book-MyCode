@@ -12,6 +12,9 @@ namespace PartyInvites.Controllers
     {
         public ViewResult Index()
         {
+            int hour = DateTime.Now.Hour;
+            ViewBag.Greeting = hour < 12 ? "Good Morning" : "Good Afternoon";
+
             //return a ViewResult object, create the ViewResult object by calling the View method
             return View("MyView");
         }
