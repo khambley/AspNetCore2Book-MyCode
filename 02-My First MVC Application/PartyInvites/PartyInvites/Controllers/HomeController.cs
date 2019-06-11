@@ -18,6 +18,19 @@ namespace PartyInvites.Controllers
             //return a ViewResult object, create the ViewResult object by calling the View method
             return View("MyView");
         }
+        [HttpGet]
+        public ViewResult RsvpForm()
+        {
+            //Url link: /Home/RsvpForm
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult RsvpForm(GuestResponse guestResponse)
+        {
+            //TODO: store response from guest
+            return View();
+        }
 
     }
 }
